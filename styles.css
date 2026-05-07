@@ -466,6 +466,19 @@ a {
   font-weight: 800;
 }
 
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.contact-link.secondary {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+}
+
 .site-footer {
   padding: 26px 32px 38px;
   color: var(--muted-ink);
@@ -563,6 +576,10 @@ a {
   .honor-item {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  .contact-links {
+    justify-content: stretch;
   }
 
   .contact-link {
