@@ -275,24 +275,17 @@ a {
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 18px;
 }
 
 .work-card {
-  min-height: 300px;
+  min-height: auto;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
   padding: 24px;
   box-shadow: var(--shadow);
-}
-
-.work-card.featured {
-  grid-column: span 2;
-  background:
-    linear-gradient(135deg, rgba(52, 211, 153, 0.1), transparent 42%),
-    #ffffff;
 }
 
 .card-topline {
@@ -489,10 +482,6 @@ a {
   .notes-list,
   .contact-section {
     grid-template-columns: 1fr;
-  }
-
-  .work-card.featured {
-    grid-column: span 1;
   }
 
   .section {
