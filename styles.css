@@ -389,6 +389,35 @@ a {
   border-top: 1px solid var(--line);
 }
 
+.honors-list {
+  border-top: 1px solid var(--line);
+}
+
+.honor-item {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 30px;
+  border-bottom: 1px solid var(--line);
+  padding: 26px 0;
+}
+
+.honor-date {
+  margin: 0;
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.honor-item h3 {
+  margin: 0 0 8px;
+  font-size: 1.18rem;
+  line-height: 1.24;
+}
+
+.honor-item p {
+  margin: 4px 0 0;
+  color: var(--muted-ink);
+}
+
 .timeline-item {
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
@@ -530,7 +559,8 @@ a {
     font-size: 2rem;
   }
 
-  .timeline-item {
+  .timeline-item,
+  .honor-item {
     grid-template-columns: 1fr;
     gap: 10px;
   }
