@@ -455,6 +455,69 @@ a {
   border-top: 1px solid var(--line);
 }
 
+.contact-fold {
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-fold summary {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  padding: 15px 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.contact-fold summary::-webkit-details-marker {
+  display: none;
+}
+
+.contact-fold summary .contact-value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.contact-fold summary .contact-value::after {
+  content: "+";
+  color: var(--blue);
+  font-weight: 900;
+}
+
+.contact-fold[open] summary .contact-value::after {
+  content: "-";
+}
+
+.contact-options {
+  display: grid;
+  gap: 9px;
+  padding: 0 0 16px 230px;
+}
+
+.contact-option {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 14px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.contact-option-label {
+  color: var(--muted-ink);
+  font-size: 0.88rem;
+}
+
+.contact-option-value {
+  overflow-wrap: anywhere;
+}
+
+a.contact-option:hover .contact-option-value,
+a.contact-option:focus-visible .contact-option-value {
+  color: var(--blue);
+}
+
 .contact-item {
   display: grid;
   grid-template-columns: 230px minmax(0, 1fr);
@@ -587,5 +650,15 @@ a.contact-item:focus-visible .contact-value {
   .contact-item {
     grid-template-columns: 1fr;
     gap: 4px;
+  }
+
+  .contact-fold summary,
+  .contact-option {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .contact-options {
+    padding-left: 0;
   }
 }
